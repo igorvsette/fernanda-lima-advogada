@@ -14,6 +14,8 @@ body {
     gap: 40px;
 }
 
+/* ... Código da Hero Section (mantido)... */
+
 .left-content-wrapper {
     flex: 1; 
     max-width: 50%; 
@@ -109,8 +111,72 @@ body {
     overflow: hidden;
 }
 
+/* --------------------------------- */
+/* Regras de Layout PADRÃO (Desktop) */
+/* --------------------------------- */
 
-/* @media é a Responsividade */
+.imagem-secundaria{
+    /* Removido o display: flex e justify-content: center para manter o fluxo normal do desktop */
+    margin-bottom: 30px;
+}
+
+.imagem-secundaria img{
+    width: 350px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-right: 0;
+}
+.imagem-secundaria:hover img{
+    transition:  0.8s ease;
+    transform: scale(1.10);
+}
+
+.footer-copyright{
+    text-align: center;
+    border-top: 1px solid rgba(61, 64, 56, 0.2); 
+    padding-top: 15px;
+    font-size: 0.8rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* Ajustado o gap de 150px para 80px (melhor para desktop) */
+    gap: 80px; 
+    /* Removido text-align: center; e flex-direction: column; daqui */
+    margin: 0 auto; 
+    max-width: 1200px; 
+    /* Padding original de desktop */
+    padding: 60px 10%; 
+    color: #646756;
+}
+
+.footer-coluna-esquerda {
+    flex: 1; 
+    max-width: 350px; /* Valor original de desktop */
+    /* Removido text-align: center; daqui */
+}
+.footer-coluna-esquerda img {
+    width: 100%; /* Para respeitar o max-width: 350px */
+    /* Removido margin: 0 auto; daqui */
+}
+
+.footer-coluna-direita {
+    flex: 2;
+    text-align: left; /* Definido alinhamento esquerdo para o texto */
+}
+
+.footer-sobre-mim h2{
+    font-size: 2.5rem;
+}
+
+/* --------------------------------- */
+/* Regras de Responsividade (@media) */
+/* --------------------------------- */
+
 @media (max-width: 768px) {  
     .hero-section {
         flex-direction: column; 
@@ -137,67 +203,38 @@ body {
         justify-content: center; 
     }
 
+    /* Regras de MOBILE para a Imagem Secundária */
+    .imagem-secundaria{
+        display: flex; 
+        justify-content: center; 
+        padding: 20px; 
+        margin-bottom: 20px; /* Ajustado */
+    }
+    
+    /* Regras de MOBILE para o Footer */
+    .footer-container {
+        flex-direction: column; /* Empilha colunas */
+        gap: 40px; /* Reduz gap */
+        text-align: center; /* Centraliza o texto */
+        padding: 40px 5%; /* Ajusta padding */
+    }
 
-.imagem-secundaria{
-    display: flex; /* Garante que a imagem possa ser centralizada */
-    justify-content: center; /* Centraliza a imagem na tela */
-    padding: 20px; /
-   margin-bottom: 30px;
-}
+    .footer-coluna-esquerda,
+    .footer-coluna-direita {
+        max-width: 100%; 
+        text-align: center;
+    }
 
-.imagem-secundaria img{
-    width: 350px;
-    height: auto;
-    border-radius: 30px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    display: block;
-    margin-right: 0;
-}
-.imagem-secundaria:hover img{
-    transition:  0.8s ease;
-    transform: scale(1.10);
-}
+    .footer-coluna-esquerda img {
+        max-width: 250px; 
+        margin: 0 auto; 
+    }
 
-.footer-copyright{
-   text-align: center;
-    border-top: 1px solid rgba(61, 64, 56, 0.2); 
-    padding-top: 15px;
-    font-size: 0.8rem;
-}
+    .footer-sobre-mim h2 {
+        font-size: 2rem; 
+    }
+} /* <--- Chave de fechamento FINAL da Media Query */
 
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 60px; 
-    text-align: center;
-    flex-direction: column;
-    margin: 0 auto; 
-    max-width: 1200px; 
-    padding: 40px 5%;
-    color: #646756;
-}
-
-.footer-coluna-esquerda {
-    flex: 1; 
-    max-width: 100%; 
-    text-align: center;
-}
-.footer-coluna-esquerda img {
-    width: 250px;
-    margin: 0 auto;
-}
-
-.footer-coluna-direita {
-    flex: 2;
-    text-align: auto; 
-}
-
-.footer-sobre-mim h2{
-    font-size: 2.5rem;
-}
-
-}
 
 
 
