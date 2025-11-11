@@ -138,6 +138,7 @@ body {
     }
 }    
 
+@media (max-width: 768px) {
 .imagem-secundaria{
    margin-bottom: 30px;
 }
@@ -189,6 +190,8 @@ body {
 .footer-sobre-mim h2{
     font-size: 2.5rem;
 }
+}
+
 
 
 
