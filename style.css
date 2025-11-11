@@ -138,11 +138,12 @@ body {
     }
 }    
 
-@media (max-width: 768px) {
+
 .imagem-secundaria{
    margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
 .imagem-secundaria img{
     width: 350px;
     height: auto;
@@ -154,6 +155,7 @@ body {
 .imagem-secundaria:hover img{
     transition:  0.8s ease;
     transform: scale(1.10);
+}
 }
 
 .footer-copyright{
@@ -190,7 +192,8 @@ body {
 .footer-sobre-mim h2{
     font-size: 2.5rem;
 }
-}
+
+
 
 
 
